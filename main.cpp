@@ -9,5 +9,7 @@ int main(){
     shit=false;
     cout<<"hello\n";
 	//elvis
+    //alex
+	//fml
 	system("pause");
 }
