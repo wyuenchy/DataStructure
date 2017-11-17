@@ -9,4 +9,5 @@ int main(){
     shit=false;
     cout<<"hello\n";
 	//elvis
+	system("pause");
 }
