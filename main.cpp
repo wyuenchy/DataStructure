@@ -5,4 +5,5 @@ int main(){
     cout<<"hello hello\n";
     cout<<"whatever\n";
 	bool shit;
+    shit=true;
 }
