@@ -7,4 +7,5 @@ int main(){
 	bool shit;
     shit=true;
     shit=false;
+    cout<<"hello\n";
 }
