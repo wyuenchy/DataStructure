@@ -6,4 +6,5 @@ int main(){
     cout<<"whatever\n";
 	bool shit;
     shit=true;
+    shit=false;
 }
