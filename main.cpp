@@ -4,5 +4,4 @@ int main(){
     cout<<"schitt\n";
     cout<<"hello hello\n";
     cout<<"whatever\n";
-    cout<<"wwwww\n";
 }
