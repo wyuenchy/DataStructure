@@ -1,39 +1,36 @@
-<<<<<<< HEAD
-#include<stdio.h>
-#include<conio.h>
-#include<iostream>
-#include<string>
-#include"Node.h"
-#include<fstream>
-using namespace std;
-struct BTreeNode
-{
-	int *data;
-	BTreeNode **child_ptr;
-	bool leaf;
-	int n;
-}*root = NULL, *np = NULL, *x = NULL;
-BTreeNode * init()
-{
-	int i;
-	np = new BTreeNode;
-	np->data = new int[5];
-	np->child_ptr = new BTreeNode *[6];
-	np->leaf = true;
-	np->n = 0;
-	for (i = 0; i < 6; i++)
-	{
-		np->child_ptr[i] = NULL;
-	}
-	return np;
-=======
 #include <iostream>
 #include <ctime>
 #include <fstream>
 #include <string>
+#include<stdio.h>
+//#include<conio.h>
+#include<iostream>
+#include<fstream>
 using namespace std;
 
 
+struct BTreeNode
+{
+    int *data;
+    BTreeNode **child_ptr;
+    bool leaf;
+    int n;
+}*root = NULL, *np = NULL, *x = NULL;
+BTreeNode * init()
+{
+    int i;
+    np = new BTreeNode;
+    np->data = new int[5];
+    np->child_ptr = new BTreeNode *[6];
+    np->leaf = true;
+    np->n = 0;
+    for (i = 0; i < 6; i++)
+    {
+        np->child_ptr[i] = NULL;
+    }
+    return np;
+}
+    
 double functionA(int n) {
 	clock_t startTime = clock();
 
@@ -62,7 +59,6 @@ int main(){
 	cout << endl;*/
 
 	system("pause");
->>>>>>> fa5e1e6aebb36dfc9a686221f76b732939f7ae33
 }
 void traverse(BTreeNode *p)
 {
@@ -219,7 +215,7 @@ void insert(int a)
 	sort(x->data, x->n);
 	x->n++;
 }
-int main()
+/*int main()
 {
 	int sum = 0;
 	ifstream file("Contacts for Project.txt");
@@ -248,6 +244,7 @@ int main()
 			newNode->givenNameID = sum;
 			newNode->ID = i + 1;
 			insert(newNode->surnameID);
+ */
 			/*cout << newNode->title << endl;
 			cout << newNode->surname << endl;
 			cout << newNode->givenName << endl;
@@ -261,9 +258,9 @@ int main()
 			cout << newNode->givenNameID << endl;
 			cout << newNode->ID << endl;*/
 
-		}
+/*		}
 	}
-
+*/
 	/*int n, t;
 	cout << "enter the no of elements to be inserted\n";
 	cin >> n;
@@ -272,8 +269,7 @@ int main()
 	cin >> t;
 	insert(t);
 	}*/
-	insert(499);
+	/*insert(499);
 	cout << "traversal of constructed tree\n";
 	traverse(root);
-	getch();
-}
+}*/
