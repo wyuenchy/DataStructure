@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include<stdio.h>
+#include"node.h"
 //#include<conio.h>
 #include<iostream>
 #include<fstream>
@@ -40,7 +41,7 @@ double functionA(int n) {
 	return (double)(endTime - startTime) / CLOCKS_PER_SEC;
 }
 
-int main(){
+/*int main(){
 
 	ifstream inputFile("Contacts for Project.txt");
 
@@ -50,16 +51,16 @@ int main(){
 		cout << str;
 	}
 
-	/*
+	
 	int N = 150000;
 	cout << "Time for function A in seconds" << endl;
 	cout << "------------------------------" << endl;
 	cout << "n=150000,  time: " << functionA(N) << "s" << endl;
 	
-	cout << endl;*/
+	cout << endl;
 
 	system("pause");
-}
+}*/
 void traverse(BTreeNode *p)
 {
 	cout << endl;
@@ -215,7 +216,7 @@ void insert(int a)
 	sort(x->data, x->n);
 	x->n++;
 }
-/*int main()
+int main()
 {
 	int sum = 0;
 	ifstream file("Contacts for Project.txt");
@@ -244,7 +245,7 @@ void insert(int a)
 			newNode->givenNameID = sum;
 			newNode->ID = i + 1;
 			insert(newNode->surnameID);
- */
+ 
 			/*cout << newNode->title << endl;
 			cout << newNode->surname << endl;
 			cout << newNode->givenName << endl;
@@ -258,9 +259,9 @@ void insert(int a)
 			cout << newNode->givenNameID << endl;
 			cout << newNode->ID << endl;*/
 
-/*		}
+		}
 	}
-*/
+
 	/*int n, t;
 	cout << "enter the no of elements to be inserted\n";
 	cin >> n;
@@ -269,7 +270,8 @@ void insert(int a)
 	cin >> t;
 	insert(t);
 	}*/
-	/*insert(499);
+	insert(499);
 	cout << "traversal of constructed tree\n";
 	traverse(root);
-}*/
+	system("pause");
+}

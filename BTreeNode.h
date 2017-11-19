@@ -1,4 +1,4 @@
-#ifndef MYSINGLYLIST_H
+/*#ifndef MYSINGLYLIST_H
 #define MYSINGLYLIST_H
 
 template <class T,int M>
@@ -15,4 +15,4 @@ public:
 
 };
 
-#endif
+#endif*/
