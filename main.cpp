@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<stdio.h>
 #include<conio.h>
 #include<iostream>
@@ -25,6 +26,43 @@ BTreeNode * init()
 		np->child_ptr[i] = NULL;
 	}
 	return np;
+=======
+#include <iostream>
+#include <ctime>
+#include <fstream>
+#include <string>
+using namespace std;
+
+
+double functionA(int n) {
+	clock_t startTime = clock();
+
+	//
+	
+	clock_t endTime = clock();
+	return (double)(endTime - startTime) / CLOCKS_PER_SEC;
+}
+
+int main(){
+
+	ifstream inputFile("Contacts for Project.txt");
+
+	while (!inputFile.eof()) {
+		string str;
+		getline(inputFile, str,'\t');
+		cout << str;
+	}
+
+	/*
+	int N = 150000;
+	cout << "Time for function A in seconds" << endl;
+	cout << "------------------------------" << endl;
+	cout << "n=150000,  time: " << functionA(N) << "s" << endl;
+	
+	cout << endl;*/
+
+	system("pause");
+>>>>>>> fa5e1e6aebb36dfc9a686221f76b732939f7ae33
 }
 void traverse(BTreeNode *p)
 {
