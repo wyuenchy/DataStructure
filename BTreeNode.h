@@ -6,7 +6,7 @@ class BTreeNode {
 private:
 	bool leaf;
 	int keyTally;
-	T keys
+	T keys;
 	friend BTree<T, M>;
 
 public:
