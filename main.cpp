@@ -1,6 +1,4 @@
-#include <iostream>
 #include <ctime>
-#include <fstream>
 #include <string>
 #include<stdio.h>
 //#include<conio.h>
@@ -50,7 +48,7 @@ int main(){
 		cout << str;
 	}
 
-	/*
+	
 	int N = 150000;
 	cout << "Time for function A in seconds" << endl;
 	cout << "------------------------------" << endl;
