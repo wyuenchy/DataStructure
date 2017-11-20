@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\win7\source\repos\test\test\main.cpp(11): warning C4101: 'shit': unreferenced local variable
+  Test.vcxproj -> C:\Users\win7\source\repos\Test\Debug\Test.exe
