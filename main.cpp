@@ -15,6 +15,8 @@ struct BTreeNode
     bool leaf;
     int n;
 }*root = NULL, *np = NULL, *x = NULL;
+
+
 BTreeNode * init()
 {
     int i;
@@ -59,6 +61,7 @@ double functionA(int n) {
 
 	system("pause");
 }*/
+
 void traverse(BTreeNode *p)
 {
 	cout << endl;
@@ -77,15 +80,15 @@ void traverse(BTreeNode *p)
 	}
 	cout << endl;
 }
+
 void sort(int *p, int n)
 {
 	int i, j, temp;
-	for (i = 0; i < n; i++)
-	{
-		for (j = i; j <= n; j++)
-		{
-			if (p[i] > p[j])
-			{
+
+	for (i = 0; i < n; i++){
+		for (j = i; j <= n; j++){
+
+			if (p[i] > p[j]){
 				temp = p[i];
 				p[i] = p[j];
 				p[j] = temp;
@@ -93,6 +96,7 @@ void sort(int *p, int n)
 		}
 	}
 }
+
 int split_child(BTreeNode *x, int i)
 {
 	int j, mid;
@@ -143,6 +147,8 @@ int split_child(BTreeNode *x, int i)
 	}
 	return mid;
 }
+
+
 void insert(int a)
 {
 	int i, temp;
@@ -214,6 +220,8 @@ void insert(int a)
 	sort(x->data, x->n);
 	x->n++;
 }
+
+
 int main()
 {
 	int sum = 0;

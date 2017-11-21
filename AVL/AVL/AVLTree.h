@@ -19,6 +19,9 @@ public:
 	Node* insert(Node* node, int key);
 	void preOrder(Node* node);
 	void inOrder(Node* node);
+
+	Node* minNode(Node* node);
+	Node* deleteN(Node* node, int key);
 };
 
 

@@ -32,7 +32,14 @@ int main() {
 
 	cout << "In-order traversal of constructed tree is : \n";
 	tree->inOrder(tree->root);
+	cout << "\n\n\n";
 
+	tree->root = tree->deleteN(tree->root, 100);
+	tree->root = tree->deleteN(tree->root, 10);
+
+	cout << "In-order traversal after del is : \n";
+	tree->inOrder(tree->root);
+	cout << "\n\n\n";
 
 	system("pause");
 }

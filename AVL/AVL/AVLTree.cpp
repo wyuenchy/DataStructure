@@ -133,4 +133,86 @@ void AVLTree::inOrder(Node* node) {
 		inOrder(node->right);
 	}
 }
+Node* AVLTree::minNode(Node* node) {
+	while (node->left!=NULL) {
+		node = node->left;
+	}
+	return node;
+}
+
+Node* AVLTree::deleteN(Node* node,int key) {
+	//empty tree
+	if (node == NULL)
+		return node;
+
+	if (key < node->key) {
+		node->left = deleteN(node->left, key);
+	}else if (key> node->key) {
+		node->right = deleteN(node->right, key);
+	}
+	//same as the node key
+	else {
+		if ((node->left==NULL)||(node->right==NULL)) {
+			Node* temp = node->left ? node->left : node->right;
+
+			//case 1:	no child
+			if (temp == NULL) {
+				temp = node;
+				node = NULL;
+			}
+			//case 2:	one child
+			else {
+				*node = *temp;		//copy the content of 
+				delete temp;
+			}
+
+		}
+		else {
+			//case 3:	two child
+			Node* temp = minNode(node->right);		//find the min value of right sub tree
+
+			node->key = temp->key;					//replace the node key with the min vlaue in right sub tree
+
+			node->right = deleteN(node->right, temp->key);		//del the min value
+		}
+
+	}
+
+	if (node == NULL)
+		return node;
+
+	//update height
+	node->height = max(height(node->left), height(node->right)) + 1;
+	int balance = getBalance(node);
+
+	//////////////////////////////unbalanced
+
+	//right zig-zig
+	if (balance < -1 && getBalance(node->right)<=0)
+		return leftRotate(node);
+
+	//left zig-zig
+	if (balance > 1 && getBalance(node->left)>=0)
+		return rightRotate(node);
+
+	// Left Right zig zag
+	if (balance > 1 && getBalance(node->left)<0) {
+		node->left = leftRotate(node->left);
+		return rightRotate(node);
+	}
+
+	// Right Left zig zag
+	if (balance < -1 && getBalance(node->right)>0)
+	{
+		node->right = rightRotate(node->right);
+		return leftRotate(node);
+	}
+
+	return node;
+
+}
+
+
+
+
 
