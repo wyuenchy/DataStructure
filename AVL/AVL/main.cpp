@@ -19,7 +19,7 @@ int main() {
 		while (!iss.eof()) {
 			getline(iss, str2, '\t');
 			cout << str2 << "\t";
-			tree->root=tree->insert(tree->root, stoi(str2));
+			tree->insert(tree->root, stoi(str2));
 		}
 	}
 	cout << endl << "________________________________________________________________________________" << endl;
@@ -34,12 +34,22 @@ int main() {
 	tree->inOrder(tree->root);
 	cout << "\n\n\n";
 
-	tree->root = tree->deleteN(tree->root, 100);
-	tree->root = tree->deleteN(tree->root, 10);
+	tree->deleteN(tree->root, 100);
+	tree->deleteN(tree->root, 10);
 
 	cout << "In-order traversal after del is : \n";
 	tree->inOrder(tree->root);
 	cout << "\n\n\n";
+
+	cout << "preorder traversal of constructed tree is : \n";
+	tree->preOrder(tree->root);
+	cout << "\n\n\n";
+
+
+	int temp;
+	cout << "search for : ";
+	cin >> temp;
+	cout<<"value:\t"<<tree->search(temp)->key<<"\t height:\t"<<tree->search(temp)->height<<endl;
 
 	system("pause");
 }
