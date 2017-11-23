@@ -5,14 +5,15 @@ using namespace std;
 
 class Node{
 public:
-
+	string title, surname, givenName, dateOfBirth, address, phoneNumber, emailAddress, occupation, company;
+	int surnameID, givenNameID, ID;
 	int key;
 	int height;
 	Node* left;
 	Node* right;
 
 	//constructor
-	Node(int d);
+	Node(string* data,int d);
 
 
 	
@@ -23,8 +24,7 @@ public:
 	Node* DoubleRRotate(Node* y);
 	Node* DoubleLRotate(Node* x);
 	int getBalance(Node* node);
-	Node* insert(Node* node, int key);
-	
+	Node* insert(Node* node, string* data, int key);
 	Node* minNode(Node* node);
 	Node* deleteN(Node* node, int key);
 	Node* search(int key);

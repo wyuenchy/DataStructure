@@ -2,7 +2,16 @@
 #include <iostream>
 using namespace std;
 
-Node::Node(int d) {
+Node::Node(string* data, int d) {
+	title = data[0];
+	surname = data[1];
+	givenName = data[2];
+	dateOfBirth = data[3];
+	address = data[4];
+	phoneNumber = data[5];
+	emailAddress = data[6];
+	occupation = data[7];
+	company = data[8];
 	key = d;
 	height = 1;
 	left = right = NULL;
@@ -68,20 +77,20 @@ int Node::getBalance(Node* node) {
 }
 
 
-Node* Node::insert(Node* node, int key) {
+Node* Node::insert(Node* node,string* data, int key) {
 	//if the tree is empty
 	if (node == NULL) {
-		return (new Node(key));
+		return (new Node(data,key));
 	}
 
 
 
 	//check the key is smaller
 	if (key < node->key) {
-		node->left = insert(node->left, key);		//insert to the node left
+		node->left = insert(node->left,data, key);		//insert to the node left
 	}
 	else if (key > node->key) {
-		node->right = insert(node->right, key);
+		node->right = insert(node->right,data, key);
 	}
 	else {
 		return node;

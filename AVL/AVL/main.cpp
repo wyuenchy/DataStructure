@@ -11,8 +11,42 @@ int main() {
 	AVLTree* tree = new AVLTree();
 	
 	ifstream inputFile("test.txt");
-
 	while (!inputFile.eof()) {
+		string str, *str2;
+		getline(inputFile, str);
+		istringstream iss(str);
+		int i = 0;
+		while (!iss.eof()) {
+			//Node* newNode = new Node();
+			getline(iss, str2[0], '\t');
+			getline(iss, str2[1], '\t');
+			getline(iss, str2[2], '\t');
+			getline(iss, str2[3], '\t');
+			getline(iss, str2[4], '\t');
+			getline(iss, str2[5], '\t');
+			getline(iss, str2[6], '\t');
+			getline(iss, str2[7], '\t');
+			getline(iss, str2[8], '\t');
+			int sum = 0;
+			int shit;
+			string str3;
+			for (unsigned int i = 0; i <str2[1].size(); i++) {
+				str3 = str2[1];
+				sum += str3[i];
+			}
+			shit = sum;
+			/*sum = 0;
+			for (unsigned int i = 0; i <str2[2].size(); i++) {
+				str3 = str2[1];
+				sum += str3[i];
+			}
+			shit[1] = sum;
+			shit[2] = i + 1;*/
+			tree->insert(tree->root,str2,shit);
+			i++;
+		}
+	}
+	/*while (!inputFile.eof()) {
 		string str, str2;
 		getline(inputFile, str);
 		istringstream iss(str);
@@ -21,7 +55,7 @@ int main() {
 			cout << str2 << "\t";
 			tree->insert(tree->root, stoi(str2));
 		}
-	}
+	}*/
 	cout << endl << "________________________________________________________________________________" << endl;
 	
 	//tree->root = tree->insert(tree->root,10);
