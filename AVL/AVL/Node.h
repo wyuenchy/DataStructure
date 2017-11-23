@@ -6,7 +6,7 @@ using namespace std;
 class Node{
 public:
 	string title, surname, givenName, dateOfBirth, address, phoneNumber, emailAddress, occupation, company;
-	int surnameID, givenNameID, ID;
+	//int surnameID, givenNameID, ID;
 	int key;
 	int height;
 	Node* left;

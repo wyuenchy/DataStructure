@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Node::Node(string* data, int d) {
+Node::Node(string* data, int d){
 	title = data[0];
 	surname = data[1];
 	givenName = data[2];
