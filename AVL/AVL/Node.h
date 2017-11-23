@@ -1,19 +1,21 @@
 #ifndef NODE_H
 #define NODE_H
-
+#include <string>
 using namespace std;
 
 class Node{
 public:
-	string title, surname, givenName, dateOfBirth, address, phoneNumber, emailAddress, occupation, company;
-	//int surnameID, givenNameID, ID;
-	int key;
+
+	string key;
 	int height;
 	Node* left;
 	Node* right;
+	string title, surname, givenName, gender, dateOfBirth;
+	string	address,city,stateFull,zipCode,Country,teleCountryCode, phoneNumber, emailAddress, occupation, company;
+
 
 	//constructor
-	Node(string* data,int d);
+	Node(string* data);
 
 
 	
@@ -21,13 +23,13 @@ public:
 	int max(int left, int right);
 	Node* rightRotate(Node* y);
 	Node* leftRotate(Node* x);
-	Node* DoubleRRotate(Node* y);
-	Node* DoubleLRotate(Node* x);
+	
 	int getBalance(Node* node);
-	Node* insert(Node* node, string* data, int key);
-	Node* minNode(Node* node);
-	Node* deleteN(Node* node, int key);
-	Node* search(int key);
+	Node* insert(Node* node, string* data,string key);
+	
+	//Node* minNode(Node* node);
+	//Node* deleteN(Node* node, int key);
+	Node* search(string key1,string key2,Node* node);
 };
 
 

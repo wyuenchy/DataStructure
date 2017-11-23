@@ -12,9 +12,11 @@ public:
 	
 	void preOrder(Node* node);
 	void inOrder(Node* node);
-	void insert(Node* node, int key);
-	void deleteN(Node* node, int key);
-	Node* search(int key);
+	void insert(Node* node, string* data);
+
+	//void deleteN(Node* node, int key);
+	Node* search(string key1,string key2);
+	//void display(Node* node);
 };
 
 

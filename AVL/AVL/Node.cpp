@@ -2,19 +2,30 @@
 #include <iostream>
 using namespace std;
 
-Node::Node(string* data, int d){
+Node::Node(string* data) {
+
 	title = data[0];
 	surname = data[1];
 	givenName = data[2];
-	dateOfBirth = data[3];
-	address = data[4];
-	phoneNumber = data[5];
-	emailAddress = data[6];
-	occupation = data[7];
-	company = data[8];
-	key = d;
+	gender = data[3];
+	dateOfBirth = data[4];
+	address = data[5];
+	city = data[6];
+	stateFull = data[7];
+	zipCode = data[8];
+	Country = data[9];
+	teleCountryCode = data[10];
+	phoneNumber = data[11];
+	emailAddress = data[12];
+	occupation = data[13];
+	company = data[14];
+
+
+	
+	key = surname + " " + givenName;
 	height = 1;
 	left = right = NULL;
+	
 }
 
 
@@ -59,15 +70,7 @@ Node* Node::leftRotate(Node* x) {
 	return y;
 }
 
-Node* Node::DoubleRRotate(Node* node) {
-	node->right = leftRotate(node->right);
-	return rightRotate(node);
-}
 
-Node* Node::DoubleLRotate(Node* node) {
-	node->right = rightRotate(node->left);
-	return leftRotate(node);
-}
 
 int Node::getBalance(Node* node) {
 	if (node == NULL) {
@@ -77,23 +80,24 @@ int Node::getBalance(Node* node) {
 }
 
 
-Node* Node::insert(Node* node,string* data, int key) {
+Node* Node::insert(Node* node, string* data,string key) {
+
+
 	//if the tree is empty
 	if (node == NULL) {
-		return (new Node(data,key));
+		return (new Node(data));
 	}
-
 
 
 	//check the key is smaller
-	if (key < node->key) {
-		node->left = insert(node->left,data, key);		//insert to the node left
+	if (key.compare(node->key)<0) {
+		node->left = insert(node->left, data,key);		//insert to the node left
 	}
-	else if (key > node->key) {
-		node->right = insert(node->right,data, key);
+	else if (key.compare(node->key)>0) {
+		node->right = insert(node->right, data,key);
 	}
 	else {
-		return node;
+		//node->list.insertNode()
 	}
 
 	//update height
@@ -127,13 +131,14 @@ Node* Node::insert(Node* node,string* data, int key) {
 
 }
 
-
+/*
 Node* Node::minNode(Node* node) {
 	while (node->left != NULL) {
 		node = node->left;
 	}
 	return node;
 }
+
 
 Node* Node::deleteN(Node* node, int key) {
 	//empty tree
@@ -207,27 +212,31 @@ Node* Node::deleteN(Node* node, int key) {
 	return node;
 
 }
+*/
 
-Node* Node::search(int key) {
-	if (key==this->key) {
-		return this;
+
+Node* Node::search(string key1,string key2,Node* node) {
+
+	if (node==NULL) 
+		return NULL;
+	
+	
+	if (key1<node->key) {
+		return search(key1, key2,node->left);
 	}
-	else if (key>this->key) {
-		if (right==NULL) {
-			cout << "NO match\t";
-		}
-		else {
-			return right->search(key);
-		}
+	else if(key1>node->key) {
+		return search(key1, key2,node->right);
 	}
-	else if (key<this->key) {
-		if (left==NULL) {
-			cout << "NO match\t";
-		}
-		else {
-			return left->search(key);
-		}
+	else {
+		return node;
 	}
+
 }
+
+
+
+
+
+
 
 

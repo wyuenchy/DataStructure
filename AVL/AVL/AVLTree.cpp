@@ -27,24 +27,24 @@ void AVLTree::inOrder(Node* node) {
 	}
 }
 
-void AVLTree::insert(Node* node, int key) {
-	root=root->insert(node, key);
+
+void AVLTree::insert(Node* node, string* data) {
+	string key = data[1] + data[2];
+	root=root->insert(node,data,key);
 }
 
 
+/*
 void AVLTree::deleteN(Node* node, int key) {
 	root = root->deleteN(node, key);
 }
+*/
 
-
-Node* AVLTree::search(int key) {
-	if (root==NULL) {
-		cout << "The tree is empty\t";
-	}
-	else {
-		return root->search(key);
-	}
+Node* AVLTree::search(string key1,string key2) {
+	return root->search(key1, key2,root);
 }
+
+
 
 
 

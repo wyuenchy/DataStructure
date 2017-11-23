@@ -6,4 +6,5 @@ Mrs.	Baker	Jeanette	female	3/26/1982	940 Woodland Terrace	Sacramento	California	
 Mrs.	Walker	Blanca	female	12/1/1951	4736 Lynch Street	Fond Du Lac	Wisconsin	54935	United States	1	920-926-1026	BlancaJWalker@teleworm.us	Private banker	Music Den
 Mr.	Knight	Harold	male	8/30/1946	1264 Columbia Road	Philadelphia	Delaware	19103	United States	1	302-907-7871	HaroldMKnight@rhyta.com	Gas and water service dispatcher	Bell Markets
 Mrs.	Tate	Sandra	female	3/20/1940	775 Spring Avenue	Allentown	Pennsylvania	18101	United States	1	267-629-3575	SandraDTate@einrot.com	Financial investigator	Baltimore Markets
-Ms.	Flores	Mary	female	12/11/1959	608 Mulberry Lane	Miami	Florida	33131	United States	1	561-760-3252	MaryRFlores@armyspy.com	Punch card operator	Protean
+Ms.	Flores	Mary	female	12/11/1959	608 Mulberry Lane	Miami	Florida	33131	United States	1	123	MaryRFlores@armyspy.com	Punch card operator	Protean
+Ms.	Flores	Mary	Male	12/11/1959	608 Mulberry Lane	Miami	Florida	33131	United States	1	456	MaryRFlores@armyspy.com	Punch card operator	Protean
