@@ -228,7 +228,13 @@ Node* Node::search(string key1,string key2,Node* node) {
 		return search(key1, key2,node->right);
 	}
 	else {
-		return node;
+		/*if (key2 == node->phoneNumber) {
+			return node;
+		}
+		else
+		{*/
+			return node;
+		//}
 	}
 
 }

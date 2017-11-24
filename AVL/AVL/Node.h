@@ -30,6 +30,8 @@ public:
 	//Node* minNode(Node* node);
 	//Node* deleteN(Node* node, int key);
 	Node* search(string key1,string key2,Node* node);
+	//void searchShit(string key, Node* node, int i); 
+	//string* addTo2d(Node* node);
 };
 
 
