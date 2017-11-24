@@ -9,53 +9,27 @@ using namespace std;
 
 int main() {
 	AVLTree* tree = new AVLTree();
-	int sumS,sumG;
-
-	ifstream inputFile("test2.txt");
-	string data[15];
+	
+	ifstream inputFile("test.txt");
 
 	while (!inputFile.eof()) {
 		string str, str2;
 		getline(inputFile, str);
-		istringstream line(str);
-		int i = 0;
-		sumS = 0;
-		sumG = 0;
-
-		while (!line.eof()) {
-			getline(line, str2, '\t');
-			//cout << str2 << "\t";
-
-			data[i] = str2;
-			
-			
-			//insert(tree->root,unique key,tree->root->data[i])
-			//tree->root=tree->insert(tree->root, stoi(str2))
-			
-			//cout << data[i] << "\n";
-			i++;
+		istringstream iss(str);
+		while (!iss.eof()) {
+			getline(iss, str2, '\t');
+			cout << str2 << "\t";
+			tree->root=tree->insert(tree->root, stoi(str2));
 		}
-
-		for (int x = 0; x < data[1].size();x++) {
-			sumS += data[1][x];
-		}
-		cout << sumS << "\t";
-		
-		for (int x = 0; x < data[2].size(); x++) {
-			sumG += data[2][x];
-		}
-		cout << sumG << "\t";
-		cout << endl<<endl;
-		
 	}
-
-	
 	cout << endl << "________________________________________________________________________________" << endl;
 	
+	//tree->root = tree->insert(tree->root,10);
+	//tree->root = tree->insert(tree->root,3);
+	//tree->root = tree->insert(tree->root,7);
+	
+	
 
-	
-	
-	/*
 	cout << "In-order traversal of constructed tree is : \n";
 	tree->inOrder(tree->root);
 	cout << "\n\n\n";
@@ -65,7 +39,7 @@ int main() {
 
 	cout << "In-order traversal after del is : \n";
 	tree->inOrder(tree->root);
-	cout << "\n\n\n";*/
+	cout << "\n\n\n";
 
 	system("pause");
 }
