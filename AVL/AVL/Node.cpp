@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+<<<<<<< HEAD
 Node::Node(string* data) {
 	title = data[0];
 	surname = data[1];
@@ -224,3 +225,10 @@ Node* Node::search(string key1,string key2,Node* node) {
 
 
 
+=======
+Node::Node(int d) {
+	key = d;
+	height = 1;
+	left = right = NULL;
+}
+>>>>>>> 7305c7379c06ee3e5551e99221ae34d8cb22a131
