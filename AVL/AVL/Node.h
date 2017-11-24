@@ -10,7 +10,8 @@ public:
 	int height;
 	Node* left;
 	Node* right;
-	string* data;
+	string title, surname, givenName, gender, dateOfBirth;
+	string	address, city, stateFull, zipCode, Country, teleCountryCode, phoneNumber, emailAddress, occupation, company;
 
 	//constructor
 	Node(string* data);

@@ -12,7 +12,7 @@ int main() {
 	int i;
 	string data[15];
 
-	ifstream inputFile("Contacts for Project.txt");
+	ifstream inputFile("test2.txt");
 	
 	while (!inputFile.eof()) {
 		string str, str2;
@@ -20,10 +20,19 @@ int main() {
 		getline(inputFile, str);
 		istringstream line(str);
 		i = 0;
-		
+		/*
+		for(int i =0; i < str.size();i++){
+			if(
+			str2 = str[i];
+
+
+		}
+		*/
 		while (!line.eof()) {
 			getline(line, str2, '\t');
+			if (get(str2) == '\t') {
 
+			}
 			data[i] = str2;
 
 	
@@ -71,7 +80,7 @@ int main() {
 	
 	
 		if (tree->search(temp, phone) != NULL) {
-			cout << tree->search(temp, phone)->data[9] << "\t" << tree->search(temp, phone)->data[10]<< endl;
+			cout << tree->search(temp, phone)->Country << "\t" << tree->search(temp, phone)->address<< endl;
 		}
 		else {
 			cout << "NO Match Found";

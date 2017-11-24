@@ -3,8 +3,22 @@
 using namespace std;
 
 Node::Node(string* data) {
-	data = this->data;
-	key = data[1] + data[2];
+	title = data[0];
+	surname = data[1];
+	givenName = data[2];
+	gender = data[3];
+	dateOfBirth = data[4];
+	address = data[5];
+	city = data[6];
+	stateFull = data[7];
+	zipCode = data[8];
+	Country = data[9];
+	teleCountryCode = data[10];
+	phoneNumber = data[11];
+	emailAddress = data[12];
+	occupation = data[13];
+	company = data[14];
+	key = surname + givenName;
 	height = 1;
 	left = right = NULL;
 	
@@ -112,7 +126,7 @@ Node* Node::insert(Node* node, string* data,string key) {
 	return node;
 
 }
-/*
+
 Node* Node::minValueNode(Node* node)
 {
 	Node* current = node;
@@ -141,7 +155,16 @@ Node* Node::deleteNode(Node* node)
 		else
 		{
 			Node* temp = minValueNode(node->right);
-			node->data = temp->data;
+			node->title = temp->title;
+			node->surname = temp->surname;
+			node->givenName = temp->givenName;
+			node->gender = temp->gender;
+			node->dateOfBirth = temp->dateOfBirth;
+			node->address = temp->address;
+			node->city = temp->city;
+			node->stateFull = temp->stateFull;
+			node->zipCode = temp->zipCode;
+			node->
 			node->key = temp->key;
 			node->height = temp->height;
 			string* data;
@@ -167,7 +190,7 @@ Node* Node::deleteNode(Node* node)
 		return leftRotate(node);
 	}
 return node;
-}*/
+}
 
 
 Node* Node::search(string key1,string key2,Node* node) {

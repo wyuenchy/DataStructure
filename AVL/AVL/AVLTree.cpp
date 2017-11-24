@@ -26,63 +26,139 @@ void AVLTree::inOrder(Node* node) {
 		inOrder(node->right);
 	}
 }
-/*
-void AVLTree::searchShit(string key, Node* node, int i) {
-	if (node != NULL && key==node->data[i]) {
-		searchShit(key, node->left, i);
-		addTo2d(node);
-		searchShit(key, node->right, i);
+
+void AVLTree::searchShit(string key, Node* node,string constrain) {
+	if (constrain == "title") {
+		if (node != NULL && key == node->title) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
 	}
-}
-void AVLTree::addTo2d(Node* node) {
-	if (fucking2DArray == NULL) {
-		fucking2DArray[0][0] = node->data[0];
-		fucking2DArray[0][1] = node->data[1];
-		fucking2DArray[0][2] = node->data[2];
-		fucking2DArray[0][3] = node->data[3];
-		fucking2DArray[0][4] = node->data[4];
-		fucking2DArray[0][5] = node->data[5];
-		fucking2DArray[0][6] = node->data[6];
-		fucking2DArray[0][7] = node->data[7];
-		fucking2DArray[0][8] = node->data[8];
-		fucking2DArray[0][9] = node->data[9];
-		fucking2DArray[0][10] = node->data[10];
-		fucking2DArray[0][11] = node->data[11];
-		fucking2DArray[0][12] = node->data[12];
-		fucking2DArray[0][13] = node->data[13];
-		fucking2DArray[0][14] = node->data[14];
+	else if (constrain == "surname") {
+		if (node != NULL && key == node->surname) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
 	}
-	else {
-		int rows = sizeof(fucking2DArray) / sizeof(fucking2DArray[0]);
-		fucking2DArray[rows + 1][0] = node->data[0];
-		fucking2DArray[rows + 1][1] = node->data[1];
-		fucking2DArray[rows + 1][2] = node->data[2];
-		fucking2DArray[rows + 1][3] = node->data[3];
-		fucking2DArray[rows + 1][4] = node->data[4];
-		fucking2DArray[rows + 1][5] = node->data[5];
-		fucking2DArray[rows + 1][6] = node->data[6];
-		fucking2DArray[rows + 1][7] = node->data[7];
-		fucking2DArray[rows + 1][8] = node->data[8];
-		fucking2DArray[rows + 1][9] = node->data[9];
-		fucking2DArray[rows + 1][10] = node->data[10];
-		fucking2DArray[rows + 1][11] = node->data[11];
-		fucking2DArray[rows + 1][12] = node->data[12];
-		fucking2DArray[rows + 1][13] = node->data[13];
-		fucking2DArray[rows + 1][14] = node->data[14];
+	else if (constrain == "givenName") {
+		if (node != NULL && key == node->givenName) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "gender") {
+		if (node != NULL && key == node->gender) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "birthday") {
+		if (node != NULL && key == node->dateOfBirth) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "address") {
+		if (node != NULL && key == node->address) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "city") {
+		if (node != NULL && key == node->city) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "stateFull") {
+		if (node != NULL && key == node->stateFull) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "zipCode") {
+		if (node != NULL && key == node->title) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}else if (constrain == "countryFull") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
 	}
-}
-string** AVLTree::get2dArray() {
-	return fucking2DArray;
+	else if (constrain == "telephoneCountryCode") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
+	else if (constrain == "telephone") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
+	else if (constrain == "countryFull") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
+	else if (constrain == "countryFull") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
+	else if (constrain == "countryFull") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
+	else if (constrain == "countryFull") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
+	else if (constrain == "countryFull") {
+		if (node != NULL && key == node->Country) {
+			searchShit(key, node->left, constrain);
+			addTo1d(node);
+			searchShit(key, node->right, constrain);
+		}
+	}
 }
 
-void AVLTree::del2dArray() {
-	int cols = sizeof(fucking2DArray[0]) / sizeof(fucking2DArray[0][0]);
-	for (int i = 0; i < cols; i++) {
-		delete[] fucking2DArray[i];
+void AVLTree::addTo1d(Node* node) {
+	if (fucking1DArray == NULL) {
+		fucking1DArray[0] = node;
 	}
-	delete[]fucking2DArray;
+	else {
+		int rows = sizeof(fucking1DArray) / sizeof(fucking1DArray[0]);
+		fucking1DArray[rows + 1] = node;
+	}
 }
-*/
+Node** AVLTree::get1dArray() {
+	return fucking1DArray;
+}
+
+void AVLTree::del1dArray() {
+	delete[]fucking1DArray;
+}
+
 
 
 void AVLTree::insert(Node* node, string* data) {
