@@ -91,18 +91,9 @@ void AVLTree::insert(Node* node, string* data) {
 }
 
 
-
-
-
-/*
-void AVLTree::deleteN(Node* node, int key) {
-	root = root->deleteN(node, key);
-}
-*/
-
-Node* AVLTree::search(string key1,string key2) {
+/*Node* AVLTree::search(string key1,string key2) {
 	return root->search(key1, key2,root);
-}
+}*/
 
 
 

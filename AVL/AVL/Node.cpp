@@ -4,24 +4,6 @@ using namespace std;
 
 Node::Node(string* data) {
 	data = this->data;
-	/*title = data[0];
-	surname = data[1];
-	givenName = data[2];
-	gender = data[3];
-	dateOfBirth = data[4];
-	address = data[5];
-	city = data[6];
-	stateFull = data[7];
-	zipCode = data[8];
-	Country = data[9];
-	teleCountryCode = data[10];
-	phoneNumber = data[11];
-	emailAddress = data[12];
-	occupation = data[13];
-	company = data[14];
-
-
-	*/
 	key = data[1] + data[2];
 	height = 1;
 	left = right = NULL;
@@ -130,89 +112,61 @@ Node* Node::insert(Node* node, string* data,string key) {
 	return node;
 
 }
-
-/*
-Node* Node::minNode(Node* node) {
-	while (node->left != NULL) {
-		node = node->left;
-	}
-	return node;
+Node* Node::minValueNode(Node* node)
+{
+	Node* current = node;
+	while (current->left != NULL)
+		current = current->left;
+	return current;
 }
 
+Node* Node::deleteNode(Node* node)
+{
+		if ((node->left == NULL) || (node->right == NULL))
+		{
+			Node *temp = node->left ? node->left :
+				node->right;
 
-Node* Node::deleteN(Node* node, int key) {
-	//empty tree
-	if (node == NULL)
-		return node;
-
-	if (key < node->key) {
-		node->left = deleteN(node->left, key);
-	}
-	else if (key> node->key) {
-		node->right = deleteN(node->right, key);
-	}
-	//same as the node key
-	else {
-		if ((node->left == NULL) || (node->right == NULL)) {
-			Node* temp = node->left ? node->left : node->right;
-
-			//case 1:	no child
-			if (temp == NULL) {
+			// No child case
+			if (temp == NULL)
+			{
 				temp = node;
 				node = NULL;
 			}
-			//case 2:	one child
-			else {
-				*node = *temp;		//copy the content of 
-				delete temp;
-			}
-
+			else // One child case
+				node = temp;
+			free(temp);
 		}
-		else {
-			//case 3:	two child
-			Node* temp = minNode(node->right);		//find the min value of right sub tree
-
-			node->key = temp->key;					//replace the node key with the min vlaue in right sub tree
-
-			node->right = deleteN(node->right, temp->key);		//del the min value
+		else
+		{
+			Node* temp = minValueNode(node->right);
+			node->data = temp->data;
+			node->key = temp->key;
+			node->height = temp->height;
+			string* data;
+			deleteNode(temp);
 		}
-
-	}
-
+	
 	if (node == NULL)
 		return node;
-
-	//update height
-	node->height = max(getHeight(node->left), getHeight(node->right)) + 1;
+	node->height = 1 + max(getHeight(node->left->left),getHeight(node->left->right));
 	int balance = getBalance(node);
-
-	//////////////////////////////unbalanced
-
-	//right zig-zig
-	if (balance < -1 && getBalance(node->right) <= 0)
-		return leftRotate(node);
-
-	//left zig-zig
 	if (balance > 1 && getBalance(node->left) >= 0)
 		return rightRotate(node);
-
-	// Left Right zig zag
-	if (balance > 1 && getBalance(node->left)<0) {
+	if (balance > 1 && getBalance(node->left) < 0)
+	{
 		node->left = leftRotate(node->left);
 		return rightRotate(node);
 	}
-
-	// Right Left zig zag
-	if (balance < -1 && getBalance(node->right)>0)
+	if (balance < -1 && getBalance(node->right) <= 0)
+		return leftRotate(node);
+	if (balance < -1 && getBalance(node->right) > 0)
 	{
 		node->right = rightRotate(node->right);
 		return leftRotate(node);
 	}
-
-	return node;
-
+return node;
 }
-*/
 
 
 Node* Node::search(string key1,string key2,Node* node) {

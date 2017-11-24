@@ -17,9 +17,8 @@ public:
 	void addTo2d(Node* node);
 	string** get2dArray();
 	void del2dArray();
-	//void deleteN(Node* node, int key);
-	Node* search(string key1,string key2);
-	//void display(Node* node);
+	//Node* search(string key1,string key2);
+
 };
 
 
