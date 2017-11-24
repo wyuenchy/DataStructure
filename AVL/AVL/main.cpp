@@ -71,7 +71,7 @@ int main() {
 	
 	
 		if (tree->search(temp, phone) != NULL) {
-			cout << tree->search(temp, phone)->city << "\t" << tree->search(temp, phone)->dateOfBirth << endl;
+			cout << tree->search(temp, phone)->data[9] << "\t" << tree->search(temp, phone)->data[10]<< endl;
 		}
 		else {
 			cout << "NO Match Found";

@@ -12,7 +12,7 @@ public:
 	Node* right;
 	string title, surname, givenName, gender, dateOfBirth;
 	string	address,city,stateFull,zipCode,Country,teleCountryCode, phoneNumber, emailAddress, occupation, company;
-
+	string* data;
 
 	//constructor
 	Node(string* data);

@@ -3,8 +3,8 @@
 using namespace std;
 
 Node::Node(string* data) {
-
-	title = data[0];
+	data = this->data;
+	/*title = data[0];
 	surname = data[1];
 	givenName = data[2];
 	gender = data[3];
@@ -21,7 +21,7 @@ Node::Node(string* data) {
 	company = data[14];
 
 
-	
+	*/
 	key = data[1] + data[2];
 	height = 1;
 	left = right = NULL;

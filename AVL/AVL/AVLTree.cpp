@@ -28,7 +28,7 @@ void AVLTree::inOrder(Node* node) {
 }
 
 void AVLTree::searchShit(string key, Node* node, int i) {
-	if (node != NULL) {
+	if (node != NULL && key==node->data[i]) {
 		searchShit(key, node->left, i);
 		addTo2d(node);
 		searchShit(key, node->right, i);
@@ -36,39 +36,39 @@ void AVLTree::searchShit(string key, Node* node, int i) {
 }
 void AVLTree::addTo2d(Node* node) {
 	if (fucking2DArray == NULL) {
-		fucking2DArray[0][0] = node->title;
-		fucking2DArray[0][1] = node->surname;
-		fucking2DArray[0][2] = node->givenName;
-		fucking2DArray[0][3] = node->gender;
-		fucking2DArray[0][4] = node->dateOfBirth;
-		fucking2DArray[0][5] = node->address; 
-		fucking2DArray[0][6] = node->city;
-		fucking2DArray[0][7] = node->stateFull; 
-		fucking2DArray[0][8] = node->zipCode; 
-		fucking2DArray[0][9] = node->Country; 
-		fucking2DArray[0][10] = node->teleCountryCode;
-		fucking2DArray[0][11] = node->phoneNumber;
-		fucking2DArray[0][12] = node->emailAddress;
-		fucking2DArray[0][13] = node->occupation;
-		fucking2DArray[0][14] = node->company;
+		fucking2DArray[0][0] = node->data[0];
+		fucking2DArray[0][1] = node->data[1];
+		fucking2DArray[0][2] = node->data[2];
+		fucking2DArray[0][3] = node->data[3];
+		fucking2DArray[0][4] = node->data[4];
+		fucking2DArray[0][5] = node->data[5];
+		fucking2DArray[0][6] = node->data[6];
+		fucking2DArray[0][7] = node->data[7];
+		fucking2DArray[0][8] = node->data[8];
+		fucking2DArray[0][9] = node->data[9];
+		fucking2DArray[0][10] = node->data[10];
+		fucking2DArray[0][11] = node->data[11];
+		fucking2DArray[0][12] = node->data[12];
+		fucking2DArray[0][13] = node->data[13];
+		fucking2DArray[0][14] = node->data[14];
 	}
 	else {
 		int rows = sizeof(fucking2DArray) / sizeof(fucking2DArray[0]);
-		fucking2DArray[rows + 1][0] = node->title;
-		fucking2DArray[rows + 1][1] = node->surname;
-		fucking2DArray[rows + 1][2] = node->givenName;
-		fucking2DArray[rows + 1][3] = node->gender;
-		fucking2DArray[rows + 1][4] = node->dateOfBirth;
-		fucking2DArray[rows + 1][5] = node->address;
-		fucking2DArray[rows + 1][6] = node->city;
-		fucking2DArray[rows + 1][7] = node->stateFull;
-		fucking2DArray[rows + 1][8] = node->zipCode;
-		fucking2DArray[rows + 1][9] = node->Country;
-		fucking2DArray[rows + 1][10] = node->teleCountryCode;
-		fucking2DArray[rows + 1][11] = node->phoneNumber;
-		fucking2DArray[rows + 1][12] = node->emailAddress;
-		fucking2DArray[rows + 1][13] = node->occupation;
-		fucking2DArray[rows + 1][14] = node->company;
+		fucking2DArray[rows + 1][0] = node->data[0];
+		fucking2DArray[rows + 1][1] = node->data[1];
+		fucking2DArray[rows + 1][2] = node->data[2];
+		fucking2DArray[rows + 1][3] = node->data[3];
+		fucking2DArray[rows + 1][4] = node->data[4];
+		fucking2DArray[rows + 1][5] = node->data[5];
+		fucking2DArray[rows + 1][6] = node->data[6];
+		fucking2DArray[rows + 1][7] = node->data[7];
+		fucking2DArray[rows + 1][8] = node->data[8];
+		fucking2DArray[rows + 1][9] = node->data[9];
+		fucking2DArray[rows + 1][10] = node->data[10];
+		fucking2DArray[rows + 1][11] = node->data[11];
+		fucking2DArray[rows + 1][12] = node->data[12];
+		fucking2DArray[rows + 1][13] = node->data[13];
+		fucking2DArray[rows + 1][14] = node->data[14];
 	}
 }
 string** AVLTree::get2dArray() {
