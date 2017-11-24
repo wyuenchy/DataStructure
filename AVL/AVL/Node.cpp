@@ -22,7 +22,7 @@ Node::Node(string* data) {
 
 
 	
-	key = surname + " " + givenName;
+	key = data[1] + data[2];
 	height = 1;
 	left = right = NULL;
 	

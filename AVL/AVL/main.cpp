@@ -12,7 +12,7 @@ int main() {
 	int i;
 	string data[15];
 
-	ifstream inputFile("test2.txt");
+	ifstream inputFile("Contacts for Project.txt");
 	
 	while (!inputFile.eof()) {
 		string str, str2;
@@ -40,9 +40,9 @@ int main() {
 
 	
 	
-	cout << "In-order traversal of constructed tree is : \n";
+	/*cout << "In-order traversal of constructed tree is : \n";
 	tree->inOrder(tree->root);
-	cout << "\n\n\n";
+	cout << "\n\n\n";*/
 
 	/*
 	tree->deleteN(tree->root, 100);
@@ -57,20 +57,25 @@ int main() {
 
 
 	string sur, given,phone, temp;
+	int idk = 0;
+	while (idk < 1) {
 	cout << "search for : ";
 	cin >> sur;
 	cin >> given;
 	cout << "\n phone : ";
-	cin >> phone;
+	cin.ignore();
+	getline(cin, phone);
 	cout << endl << "________________________________________________________________________________" << endl;
 	
-	temp = sur +" "+ given;
-
-	if (tree->search(temp,phone)!=NULL) {
-		cout << tree->search(temp, phone)->city << "\t" << tree->search(temp, phone)->dateOfBirth << endl;
-	}
-	else {
-		cout << "NO Match Found";
+	temp = sur + given;
+	
+	
+		if (tree->search(temp, phone) != NULL) {
+			cout << tree->search(temp, phone)->city << "\t" << tree->search(temp, phone)->dateOfBirth << endl;
+		}
+		else {
+			cout << "NO Match Found";
+		}
 	}
 	
 	
