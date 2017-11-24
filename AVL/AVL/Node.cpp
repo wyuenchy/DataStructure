@@ -112,6 +112,7 @@ Node* Node::insert(Node* node, string* data,string key) {
 	return node;
 
 }
+/*
 Node* Node::minValueNode(Node* node)
 {
 	Node* current = node;
@@ -166,7 +167,7 @@ Node* Node::deleteNode(Node* node)
 		return leftRotate(node);
 	}
 return node;
-}
+}*/
 
 
 Node* Node::search(string key1,string key2,Node* node) {

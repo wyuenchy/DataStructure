@@ -26,7 +26,7 @@ void AVLTree::inOrder(Node* node) {
 		inOrder(node->right);
 	}
 }
-
+/*
 void AVLTree::searchShit(string key, Node* node, int i) {
 	if (node != NULL && key==node->data[i]) {
 		searchShit(key, node->left, i);
@@ -82,7 +82,7 @@ void AVLTree::del2dArray() {
 	}
 	delete[]fucking2DArray;
 }
-
+*/
 
 
 void AVLTree::insert(Node* node, string* data) {
@@ -91,9 +91,9 @@ void AVLTree::insert(Node* node, string* data) {
 }
 
 
-/*Node* AVLTree::search(string key1,string key2) {
+Node* AVLTree::search(string key1,string key2) {
 	return root->search(key1, key2,root);
-}*/
+}
 
 
 
